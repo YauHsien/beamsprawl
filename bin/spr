@@ -1,0 +1,3 @@
+#!/bin/sh
+script_dir=$(dirname $(realpath $0))
+sh $script_dir/sprawl $@
