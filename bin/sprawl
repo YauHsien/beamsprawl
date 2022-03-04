@@ -1,4 +1,6 @@
 #!/bin/sh
+the_path=$(dirname $(realpath $0))
+. $the_path/start_sprawl
 re_int='^[0-9]+$'
 cmd_start=
 opt_epmd_port=
@@ -27,9 +29,14 @@ for i in $(seq 2 $#); do
   esac
 done
 if [ -n "$cmd_start" ]; then
-  echo start ... yes
-fi
-if [ -n "$opt_epmd_port" ]; then
-  echo --epmd-port ... yes \($opt_epmd_port\)
+    echo start ... yes
+    if [ -z "$opt_epmd_port" ]; then
+        echo --epmd-port not speficied
+        exit
+    else
+        echo --epmd-port ... yes \($opt_epmd_port\)
+        start_sprawl $opt_epmd_port
+    fi
 fi
 echo impl needed
+exit
