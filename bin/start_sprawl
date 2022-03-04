@@ -1,6 +1,6 @@
 #!/bin/sh
 start_sprawl() {
   epmd_port=$1
-  ERL_EPMD_PORT=$epmd_port erl -sname sprawl -detached -heart ##rest -env HEART_COMMAND './hello world > ./hello.txt'
+  ERL_EPMD_PORT=$epmd_port erl -name 'sprawl@beamsprawl' -detached -heart ##rest -env HEART_COMMAND './hello world > ./hello.txt'
 }
 echo start_sprawl loaded
