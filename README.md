@@ -1,5 +1,5 @@
-# beamsprawl
-The BEAM-Sprawl, an Erlang run-time systems regulator.
+# BEAM Sprawl
+The BEAM-Sprawl is to glue nodes into a interconnected network.
 
 ## 問題
 我們可以啟動許多 ERTS 節點。那些節點可以互相知道，也可以互相不知道。當我在維運時，手上需要有個儀表板能幫忙列出節點清單，以及有哪個設備（包括 `gen_server` 與 `MembraneWebRTC.Endpoint` 和 `MembraneWebRTC.Peer` ）配在哪個節點上。
@@ -22,3 +22,8 @@ ERTS nodes 意味分散式網路。儀表板須為一種監管設備，而不是
 
 ## 命名
 名稱的 "sprawl" 取自科幻小說作家 Willam Gibson 小說 "Neuromancer" 的一處地帶名稱 *The Sprawl* ，是指三次世界大戰之後美國東岸由波士頓到亞特蘭大的都會帶。 `beamsprawl` 命名借用 *The Sprawl* 的骨幹意味，以及科幻小說的近未來感。
+
+## Application `:sprawl`
+
+- [**The application** `:sprawl`](sprawl/)
+- [Example application](example/)
