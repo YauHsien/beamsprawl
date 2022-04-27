@@ -43,4 +43,4 @@ $ iex -s mix
 
 ## Example
 
-See [this](https://github.com/YauHsien/tree/main/example).
+See [this](https://github.com/YauHsien/beamsprawl/tree/main/example).
