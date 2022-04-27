@@ -30,5 +30,5 @@ ERTS nodes 意味分散式網路。儀表板須為一種監管設備，而不是
 
 ## Application: `:node_resources`
 
-- [**The application** `:node_resources`][node_resources/]
+- [**The application** `:node_resources`](node_resources/)
 - [Example application](example/)
