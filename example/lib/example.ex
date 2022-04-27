@@ -3,16 +3,9 @@ defmodule Example do
   Documentation for `Example`.
   """
 
-  @doc """
-  Hello world.
+  defmacro pub_sub_name(module),
+    do: quote do: :"#{My.PubSub} for #{unquote(module)}"
 
-  ## Examples
-
-      iex> Example.hello()
-      :world
-
-  """
-  def hello do
-    :world
-  end
+  def app,
+    do: :example
 end

@@ -13,13 +13,20 @@ defmodule Example.MixProject do
 
   def application do
     [
-      extra_applications: [:logger, :sprawl]
+      extra_applications: [
+        :logger,
+        :sprawl,
+        :phoenix_pubsub,
+        :node_resources
+      ]
     ]
   end
 
   defp deps do
     [
-      {:sprawl, ">= 1.0.0", path: "../sprawl"}
+      {:node_resources, ">= 1.0.0", app: false, path: "../node_resources"},
+      {:phoenix_pubsub, ">= 2.1.1"},
+      {:sprawl, ">= 1.0.0", app: false, path: "../sprawl"}
     ]
   end
 end
