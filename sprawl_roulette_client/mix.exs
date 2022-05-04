@@ -1,10 +1,10 @@
-defmodule SprawlRoulette.MixProject do
+defmodule SprawlRouletteClient.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :sprawl_roulette,
-      version: "1.0.0",
+      app: :sprawl_roulette_client,
+      version: "0.1.0",
       elixir: "~> 1.12",
       start_permanent: Mix.env() == :prod,
       deps: deps()
@@ -13,12 +13,10 @@ defmodule SprawlRoulette.MixProject do
 
   def application do
     [
-      extra_applications: [:logger],
-      mod: {SprawlRoulette.Application, []}
+      extra_applications: [:logger]
     ]
   end
 
-  # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
       {:phoenix_pubsub, ">= 2.1.1"},
